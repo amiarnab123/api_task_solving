@@ -9,8 +9,8 @@ app  = Flask(__name__)
 mydb = conn.connect(host='localhost', user='root', passwd='Amiarnab100%')
 print(mydb)
 cursor = mydb.cursor()
-#cursor.execute("create database apitask")
-#cursor.execute("create table apitask.ineuron(employee_id int(10),employee_name varchar(80),employee_mail varchar(20),employee_attendence int(3))")
+cursor.execute("create database apitask")
+cursor.execute("create table apitask.ineuron(employee_id int(10),employee_name varchar(80),employee_mail varchar(20),employee_attendence int(3))")
 
 #1 . Write a program to insert a record in sql table via api database
 
@@ -60,7 +60,10 @@ def fetch_record():
 
 # test query : {"query" : "select employee_name,employee_mail from  apitask.ineuron"}
 
-############################################  -TASK DOING IN MONGODB-  #############################################################
+############################################  -SAME TASK DOING IN MONGODB-  #############################################################
+
+
+#5. All the above questions you have to answer for mongoDb as well
 
 client = pymongo.MongoClient("mongodb+srv://amiarnab:amiarnab100@cluster0.fugun.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
